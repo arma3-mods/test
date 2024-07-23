@@ -1,0 +1,13 @@
+name = "inventory"
+prefix = "x"
+mainprefix = "x"
+
+[version]
+major = 0
+minor = 0
+patch = 1
+
+[files]
+include = [
+    "src/*"
+]

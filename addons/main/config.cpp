@@ -20,6 +20,6 @@ class CfgFunctions {
         class public {
             file = QFOLDER(ADDON_NAME);
             class inventory {};
+        };
     };
-    }
-}
+};
