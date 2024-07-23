@@ -1,6 +1,6 @@
-name = "inventory"
-prefix = "x"
-mainprefix = "x"
+name = "Inventory stuff"
+prefix = "inventory"
+mainprefix = "z"
 
 [version]
 major = 0
@@ -9,5 +9,8 @@ patch = 1
 
 [files]
 include = [
-    "src/*"
+    "mod.cpp"
 ]
+
+[hemtt.release]
+folder = "inventory"

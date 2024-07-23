@@ -12,8 +12,17 @@ jobs:
     - uses: arma-actions/hemtt@v1
       name: Setup HEMTT
     - name: Build
-      run: hemtt release
+      run: hemtt release --no-archive
+    #- name: Archive code coverage results
+    #    uses: actions/upload-artifact@v4
+    #    with:
+    #      name: artifact
+    #      path: releases/inventory.latest.zip
 
+  #upload-to-steam:
+  #  runs-on: ubuntu-latest
+  #  name: Upload to Steam Workshop
+  #  steps:
     - uses: m00nl1ght-dev/steam-workshop-deploy@v2
       with:
         username: ${{ secrets.STEAM_USERNAME }}
