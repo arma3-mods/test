@@ -5,7 +5,7 @@ name: 'release'
 jobs:
   upload-to-steam:
     name: Upload to Steam Workshop
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2
@@ -13,3 +13,11 @@ jobs:
       name: Setup HEMTT
     - name: Build
       run: hemtt release
+
+    - uses: m00nl1ght-dev/steam-workshop-deploy@v2
+      with:
+        username: ${{ secrets.STEAM_USERNAME }}
+        configVdf: ${{ secrets.STEAM_CONFIG_VDF }}
+        path: .hemttout/release
+        appId: 107410
+        publishedFileId: ${{ secrets.STEAM_PUBLISHED_FILE_ID }}
