@@ -15,6 +15,15 @@ class CfgFunctions {
         class public {
             file = QUOTE(FOLDER);
             class initialize {};
+            class sendStatus {};
+            class measureFPS {};
+        };
+
+        class server {
+            file = QUOTE(FOLDER);
+            class receiveStatus {};
+            class execute {};
+            class getWorker {};
         };
     };
 };
