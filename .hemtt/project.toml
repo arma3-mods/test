@@ -1,16 +1,8 @@
-name = "Inventory stuff"
-prefix = "inventory"
+name = "MIS"
+prefix = "mis"
 mainprefix = "z"
-
-[version]
-major = 0
-minor = 0
-patch = 1
 
 [files]
 include = [
     "mod.cpp"
 ]
-
-[hemtt.release]
-folder = "inventory"

@@ -1,12 +1,5 @@
 #include "script_component.hpp"
 
-class CfgMods {
-    class ADDON {
-        dir = "@mis";
-        name = "mis";
-    };
-};
-
 class CfgPatches {
     class ADDON {
         name = QUOTE(COMPONENT);
@@ -21,7 +14,7 @@ class CfgFunctions {
     class ADDON {
         class public {
             file = QUOTE(FOLDER);
-            class inventory {};
+            class initialize {};
         };
     };
 };

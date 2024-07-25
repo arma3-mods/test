@@ -1,2 +1,2 @@
-name = "Inventory";
+name = "mis";
 author = "LordGolias";

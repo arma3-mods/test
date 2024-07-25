@@ -13,11 +13,6 @@ jobs:
       name: Setup HEMTT
     - name: Build
       run: hemtt release --no-archive
-    #- name: Archive code coverage results
-    #    uses: actions/upload-artifact@v4
-    #    with:
-    #      name: artifact
-    #      path: releases/inventory.latest.zip
 
   #upload-to-steam:
   #  runs-on: ubuntu-latest
