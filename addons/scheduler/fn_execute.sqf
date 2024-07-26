@@ -4,6 +4,6 @@
 params ["_arguments", "_functionName"];
 
 diag_log format ["scheduler_fnc_execute(%1):", _functionName];
-private _worker_id = call GFUN(scheduler,getWorker);
+private _worker_id = call FNC(scheduler,getWorker);
 
 _arguments remoteExec [_functionName, _worker_id, false];

@@ -16,10 +16,10 @@ if isServer then {
     // clients send status to the server
     [] spawn {
         while {true} do {
-            call GFUN(scheduler,sendStatus);
+            call FNC(scheduler,sendStatus);
             sleep 5;
         };
     };
 };
 // all sides measure FPS
-[] spawn GFUN(scheduler,measureFPS);
+[] spawn FNC(scheduler,measureFPS);
