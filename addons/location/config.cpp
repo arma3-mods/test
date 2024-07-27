@@ -20,8 +20,8 @@ class CfgFunctions {
             file = QUOTE(FOLDER);
 
             class init {};
-            class add_type {};
-            class add {};
+            class set_type {};
+            class set {};
         };
     };
 };
