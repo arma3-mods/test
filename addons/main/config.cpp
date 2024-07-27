@@ -16,12 +16,3 @@ class CfgPatches {
         requiredVersion = 1.60;
     };
 };
-
-class CfgFunctions {
-    class ADDON {
-        class public {
-            file = QUOTE(FOLDER);
-            class inventory {};
-        };
-    };
-};

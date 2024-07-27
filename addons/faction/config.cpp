@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredAddons[] = {};
-        requiredVersion = 1.60;
+        requiredVersion = 2.02;
     };
 };
 
@@ -14,16 +14,9 @@ class CfgFunctions {
     class ADDON {
         class public {
             file = QUOTE(FOLDER);
-            class init {};
-            class sendStatus {};
-            class measureFPS {};
-        };
 
-        class server {
-            file = QUOTE(FOLDER);
-            class receiveStatus {};
-            class execute {};
-            class getWorker {};
+            class list {};
+            class inventory {};
         };
     };
 };

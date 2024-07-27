@@ -14,16 +14,14 @@ class CfgFunctions {
     class ADDON {
         class public {
             file = QUOTE(FOLDER);
-            class init {};
-            class sendStatus {};
-            class measureFPS {};
         };
 
         class server {
             file = QUOTE(FOLDER);
-            class receiveStatus {};
-            class execute {};
-            class getWorker {};
+
+            class init {};
+            class add_type {};
+            class add {};
         };
     };
 };
