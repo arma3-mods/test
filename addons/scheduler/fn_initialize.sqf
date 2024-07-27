@@ -3,15 +3,15 @@
 // number of samples in the moving average of FPS
 #define WINDOW_SIZE 12
 
-GVAR(scheduler,FPSsamples) = []; // the recent FPS samples of each machine (local)
+VAR(scheduler,FPSsamples) = []; // the recent FPS samples of each machine (local)
 for "_i" from 0 to WINDOW_SIZE do {
-    GVAR(scheduler,FPSsamples) pushBack 60;
+    VAR(scheduler,FPSsamples) pushBack 60;
 };
 
 if isServer then {
     // the server stores status of the clients
-    GVAR(scheduler,workers) = createSimpleObject ["Static", [0, 0, 0]];
-    GVAR(scheduler,workers) setVariable ["_all", []];
+    VAR(scheduler,workers) = createSimpleObject ["Static", [0, 0, 0]];
+    VAR(scheduler,workers) setVariable ["_all", []];
 } else {
     // clients send status to the server
     [] spawn {

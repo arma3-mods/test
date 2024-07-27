@@ -9,5 +9,5 @@
 
 #define FOLDER \MAINPREFIX\PREFIX\addons\COMPONENT
 
-#define GVAR(component, var) TRIPLES(PREFIX,component,var)
+#define VAR(component, var) TRIPLES(PREFIX,component,var)
 #define FNC(component, name) TRIPLES(DOUBLES(PREFIX,component),fnc,name)

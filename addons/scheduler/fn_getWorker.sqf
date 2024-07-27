@@ -7,15 +7,15 @@ if not isMultiplayer exitWith {
 };
 
 private _candidates = [2];  // 2 = the server
-private _specs = [[GVAR(scheduler,FPSsamples), hasInterface, isDedicated]];
+private _specs = [[VAR(scheduler,FPSsamples), hasInterface, isDedicated]];
 private _indexes = [0];
 {
-    if ((GVAR(scheduler,workers) getVariable ("_last_update" + str _x)) + 10 > time) then {
+    if ((VAR(scheduler,workers) getVariable ("_last_update" + str _x)) + 10 > time) then {
         _candidates pushBack _x;
         _indexes pushBack (count _indexes);
-        _specs pushBack (GVAR(scheduler,workers) getVariable ("_data" + str _x));
+        _specs pushBack (VAR(scheduler,workers) getVariable ("_data" + str _x));
     };
-} forEach (GVAR(scheduler,workers) getVariable "_all");
+} forEach (VAR(scheduler,workers) getVariable "_all");
 
 private _sortingFunction = {
     (_input0 select _x) params ["_FPSsamples", "_hasInterface", "_isDedicated"];

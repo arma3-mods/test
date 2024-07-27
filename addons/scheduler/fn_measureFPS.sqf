@@ -6,9 +6,9 @@
 private _FPSindex = 0; // the next index of AS_FPSsamples to be updated
 while {true} do {
     sleep SECONDS_PER_SAMPLE;
-    GVAR(scheduler,FPSsamples) set [_FPSindex, diag_fps];
+    VAR(scheduler,FPSsamples) set [_FPSindex, diag_fps];
     _FPSindex = _FPSindex + 1;
-    if (_FPSindex == count GVAR(scheduler,FPSsamples)) then {
+    if (_FPSindex == count VAR(scheduler,FPSsamples)) then {
         _FPSindex = 0;
     };
 };
