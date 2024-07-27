@@ -14,7 +14,7 @@ jobs:
     - name: Build
       run: hemtt release --no-archive
     - name: Build
-      run: printf "protocol = 1;publishedid = ${{ secrets.STEAM_PUBLISHED_FILE_ID }};\n" > .hemttout/release/meta.cpp
+      run: printf "protocol = 1;\npublishedid = ${{ secrets.STEAM_PUBLISHED_FILE_ID }};\n" > .hemttout/release/meta.cpp
 
   #upload-to-steam:
   #  runs-on: ubuntu-latest
