@@ -16,7 +16,7 @@ class CfgFunctions {
             file = QUOTE(FOLDER);
 
             class init {};
-            class add_type {};
+            class set_type {};
             class drop {};
             class update {};
             class toggle {};
@@ -25,7 +25,7 @@ class CfgFunctions {
         class public {
             file = QUOTE(FOLDER);
 
-            class add {};
+            class set {};
             class delete {};
             class get_type {};
             class get_property {};
