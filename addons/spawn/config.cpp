@@ -28,9 +28,8 @@ class CfgFunctions {
             class set {};
             class delete {};
             class get_type {};
-            class get_property {};
-            class set_property {};
-            class execute {};
+            class get_state {};
+            class set_state {};
         };
     };
 };

@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
-params ["_name"];
+params ["_type", "_spawn"];
 
-VAR(database,shared) get QUOTE(COMPONENT) get SPAWNS deleteAt _name
+VAR(database,shared) get QUOTE(COMPONENT) get SPAWNS get _type deleteAt _name;
+
+publicVariable QUOTE(VAR(database,shared));

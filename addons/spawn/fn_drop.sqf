@@ -10,6 +10,7 @@ private _spawns = VAR(database,shared) get QUOTE(COMPONENT) get SPAWNS;
 // delegate all spawns from the dropped owner to the server
 {
     if ((_x get SOWNER) == _owner) then {
-        _x spawn FNC(spawn,execute);
+        _x set [SOWNER, clientowner];
+        publicVariable QUOTE(VAR(database,shared));
     }
 } forEach _spawns;

@@ -1,27 +1,12 @@
 #include "script_component.hpp"
 
-/*
-{
-    spawns: {
-        str: {
-            state: scalar
-            type: string
-        }
-    }
-    types: {
-        str: {
-        states: [[string, code]]
-        update: code
-        }
-    }
-}
-*/
-private _spawn = createhashmapfromarray [
-    [SPAWNS, createhashmap],
+VAR(database,shared) set [QUOTE(COMPONENT), createhashmapfromarray [
+    [SPAWNS, createhashmapfromarray [
+        [SOWNER, 2],
+        [STATE, createhashmap]
+    ]],
     [TYPES, createhashmap]
-];
-
-VAR(database,shared) set [QUOTE(COMPONENT), _spawn];
+]];
 publicVariable QUOTE(VAR(database,shared));
 
 VAR(spawn,_active) = false;
