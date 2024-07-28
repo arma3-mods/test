@@ -18,13 +18,13 @@ class CfgFunctions {
             class init {};
             class set_type {};
             class drop {};
-            class update {};
             class toggle {};
         };
 
         class public {
             file = QUOTE(FOLDER);
 
+            class update {};
             class set {};
             class delete {};
             class get_type {};
