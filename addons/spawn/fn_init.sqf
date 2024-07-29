@@ -1,10 +1,7 @@
 #include "script_component.hpp"
 
 VAR(database,shared) set [QUOTE(COMPONENT), createhashmapfromarray [
-    [SPAWNS, createhashmapfromarray [
-        [SOWNER, 2],
-        [STATE, createhashmap]
-    ]],
+    [SPAWNS, createhashmap],
     [TYPES, createhashmap]
 ]];
 publicVariable QUOTE(VAR(database,shared));

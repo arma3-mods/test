@@ -6,7 +6,7 @@ private _component = VAR(database,shared) get QUOTE(COMPONENT);
 // here it would be a good opportunity to do so
 // something like (over all states):
 /*
-if (_name == "despawned") then {
+if (_spawn == "despawned") then {
     // get best worker
     // set new owner
 }
@@ -17,16 +17,16 @@ private _update = {
     {
         [_x, _y] params ["_type", "_spawns"];
 
-        private _update = _component get TYPES get _type;
+        private _update = _component get TYPES get _type get UPDATE;
         {
             [_x, _y] params ["_name", "_spawn"];
 
             // only run spawns owned by this machine.
             if (_spawn get SOWNER != clientowner) exitwith {};
 
-            private _new_state = (_spawn get STATE) call _update;
+            private _new_state = _spawn call _update;
             if not isnil "_new_state" then {
-                [_type, _name, _new_state] call FNC(spawn,set_state);
+                [_type, _name, _new_state] call FNC(spawn,set);
             }
         } forEach _spawns;
     } forEach (_component get SPAWNS);
